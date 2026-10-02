@@ -1,6 +1,6 @@
 # ESP32 Ethernet Devboard
 
-[English](README.en.md) · [Ürün sayfası](https://ilimera.com/urunler/gelistirme-kartlari/esp32-ethernet-devboard) · [Teknik doküman (PDF)](docs/ESP32_Ethernet_teknik_dokuman_v1.pdf)
+[English](README.en.md) · [Ürün sayfası](https://ilimera.com/urunler/gelistirme-kartlari/esp32-ethernet-devboard) · [Teknik doküman (PDF)](docs/ESP32_Ethernet_teknik_dokuman_v2.pdf)
 
 ![ESP32 Ethernet Devboard](docs/images/esp32-ethernet-main.webp)
 
