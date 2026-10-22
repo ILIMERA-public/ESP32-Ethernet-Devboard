@@ -1,6 +1,6 @@
 # ESP32 Ethernet Devboard
 
-[English](README.en.md) · [Ürün sayfası](https://ilimera.com/urunler/gelistirme-kartlari/esp32-ethernet-devboard) · [Teknik doküman (PDF)](docs/ESP32_Ethernet_teknik_dokuman_v2.pdf)
+[English](README.en.md) · [Ürün sayfası](https://ilimera.com/urunler/gelistirme-kartlari/esp32-ethernet-devboard) · [Teknik doküman (PDF)](docs/ESP32_Ethernet_teknik_dokuman_v3.pdf)
 
 ![ESP32 Ethernet Devboard](docs/images/esp32-ethernet-main.webp)
 
@@ -31,7 +31,11 @@ Bu depo kartla hemen çalışmaya başlamanız için hazır örnek kodları içe
 | Kablosuz | Wi-Fi 2.4 GHz 802.11 b/g/n, Bluetooth 4.2 BR/EDR + BLE |
 | Programlama | USB Type-C (otomatik yükleme, RST ve BOOT düğmeleri) |
 | Besleme | 5 V (USB Type-C veya 5V pini), kart üstü 5 V → 3.3 V regülatör |
+| PoE | Desteklenmez (Ethernet kablosundan besleme yok) |
 | Geliştirme ortamı | Arduino IDE, PlatformIO |
+| Kart boyutu | 71 × 33 mm |
+| Montaj delikleri | 2 adet, modül (anten) tarafında, merkezden merkeze 28 mm |
+| Paket içeriği | Yalnız kart (USB kablosu, Ethernet kablosu ve adaptör dahil değildir) |
 
 ![Bağlantı seçenekleri](docs/images/esp32-ethernet-connectivity.webp)
 
@@ -122,6 +126,8 @@ paketiyle gelen kütüphanelerle çalışır.
   `05_Ethernet_WiFi_Yedekli` örneğindeki gibi aynı anda tek arayüz kullanın.
 - **Besleme:** Wi-Fi, Bluetooth ve Ethernet birlikte çalışırken USB Type-C veya 5V pininden **en az 1 A** temiz
   güç sağlayın. Zayıf USB portları ve uzun kablolar açılışta yeniden başlamalara yol açar.
+- **PoE yok:** Kart Ethernet kablosundan beslenmez. Pasif PoE enjektörü ya da pasif PoE veren cihazlarla
+  kullanmayın; besleme yalnız USB Type-C veya 5V pininden yapılır.
 - **MAC adresi:** Ethernet MAC adresi ESP32'nin eFuse'undan türetilir ve her kartta farklıdır; `ETH.macAddress()`
   ile okuyabilirsiniz.
 

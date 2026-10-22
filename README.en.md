@@ -1,6 +1,6 @@
 # ESP32 Ethernet Devboard
 
-[Türkçe](README.md) · [Product page](https://ilimera.com/en/urunler/gelistirme-kartlari/esp32-ethernet-devboard) · [Technical document (PDF, Turkish)](docs/ESP32_Ethernet_teknik_dokuman_v2.pdf)
+[Türkçe](README.md) · [Product page](https://ilimera.com/en/urunler/gelistirme-kartlari/esp32-ethernet-devboard) · [Technical document (PDF, Turkish)](docs/ESP32_Ethernet_teknik_dokuman_v3.pdf)
 
 ![ESP32 Ethernet Devboard](docs/images/esp32-ethernet-main.webp)
 
@@ -21,7 +21,11 @@ This repository contains ready-to-use example sketches.
 | Wireless | Wi-Fi 2.4 GHz 802.11 b/g/n, Bluetooth 4.2 BR/EDR + BLE |
 | Programming | USB Type-C (auto upload, RST and BOOT buttons) |
 | Power | 5 V (USB Type-C or 5V pin), on-board 5 V → 3.3 V regulator |
+| PoE | Not supported (no power over the Ethernet cable) |
 | Toolchains | Arduino IDE, PlatformIO |
+| Board size | 71 × 33 mm |
+| Mounting holes | 2, on the module (antenna) side, 28 mm center to center |
+| Package contents | Board only (USB cable, Ethernet cable and adapter not included) |
 
 ## Ethernet PHY pin definitions
 
@@ -108,6 +112,8 @@ ESP32 package. Code comments are in Turkish with an English summary in each head
   recently. Control which interface is used, or keep only one active at a time as in `05_Ethernet_WiFi_Yedekli`.
 - **Power:** with Wi-Fi, Bluetooth and Ethernet all active, supply **at least 1 A** of clean power from USB
   Type-C or the 5V pin.
+- **No PoE:** the board cannot be powered over the Ethernet cable. Do not use passive PoE injectors or devices that
+  supply passive PoE; power it only through USB Type-C or the 5V pin.
 - **MAC address:** the Ethernet MAC is derived from the ESP32 eFuse and is unique per board (`ETH.macAddress()`).
 
 ## Troubleshooting
